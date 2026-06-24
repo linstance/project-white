@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: cd3473b1e2c32c444be0044aabb818b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7394023670976458444
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_0
+  - first:
+      213: 3123302953044070308
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_1
+  - first:
+      213: 1240404172740438190
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_2
+  - first:
+      213: -8119378380121651055
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_3
+  - first:
+      213: -8738109568526485150
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_4
+  - first:
+      213: 1112004612025910962
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_5
+  - first:
+      213: 238270342597896715
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_6
+  - first:
+      213: 5604443927998857583
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_7
+  - first:
+      213: 8120016580806087189
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_8
+  - first:
+      213: -1015970132139910263
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_9
+  - first:
+      213: -5582563436782426896
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_10
+  - first:
+      213: -7735575398255304343
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_11
+  - first:
+      213: -6320633399728294540
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_12
+  - first:
+      213: -4045497618592125397
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_13
+  - first:
+      213: -5940040473448228524
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_14
+  - first:
+      213: -4908478234946007252
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_15
+  - first:
+      213: 5151499570493964811
+    second: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1433
+        width: 2008
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccea1618a59dc9660800000000000000
+      internalID: 7394023670976458444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1164
+        width: 136
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afce12ec73385b20800000000000000
+      internalID: 3123302953044070308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_2
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1292
+        width: 149
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea82b1ee50dc63110800000000000000
+      internalID: 1240404172740438190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1129
+        width: 384
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 198ccdfa16c225f80800000000000000
+      internalID: -8119378380121651055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_4
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1124
+        width: 405
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2697987d4affbb680800000000000000
+      internalID: -8738109568526485150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_5
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 1285
+        width: 152
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b686609d42ae6f00800000000000000
+      internalID: 1112004612025910962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_6
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1155
+        width: 75
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0aee0b3d918e4300800000000000000
+      internalID: 238270342597896715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_7
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1194
+        width: 66
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6187f31f0cf6cd40800000000000000
+      internalID: 5604443927998857583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 667
+        width: 782
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5129a3dfe0810b070800000000000000
+      internalID: 8120016580806087189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 749
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98bd4633c8c86e1f0800000000000000
+      internalID: -1015970132139910263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 743
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f4ef76c120c682b0800000000000000
+      internalID: -5582563436782426896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_11
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 673
+        width: 603
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961edbdf827b5a490800000000000000
+      internalID: -7735575398255304343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 731
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475b9bd39699848a0800000000000000
+      internalID: -6320633399728294540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_13
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 680
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ea02099518bd7c0800000000000000
+      internalID: -4045497618592125397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_14
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 677
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459dcac39acb09da0800000000000000
+      internalID: -5940040473448228524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_15
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 685
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f8e423d0591ebb0800000000000000
+      internalID: -4908478234946007252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2008
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02ced7c09dcd7740800000000000000
+      internalID: 5151499570493964811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_0: 7394023670976458444
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_1: 3123302953044070308
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_10: -5582563436782426896
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_11: -7735575398255304343
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_12: -6320633399728294540
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_13: -4045497618592125397
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_14: -5940040473448228524
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_15: -4908478234946007252
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_16: 5151499570493964811
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_2: 1240404172740438190
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_3: -8119378380121651055
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_4: -8738109568526485150
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_5: 1112004612025910962
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_6: 238270342597896715
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_7: 5604443927998857583
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_8: 8120016580806087189
+      sactx-0-2048x2048-DXT5_BC3-Map_battle_lobotomy_nomal_v1-80555a9d_9: -1015970132139910263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
