@@ -6,9 +6,8 @@ using UnityEngine;
 public class UnitData
 {
     public string Unit_Id;              // 유닛 아이디 string
-    public string Unit_Name;            // 유닛 이름
-
     public int Unit_Type;               // 유닛 타입 int로 받아서 enum으로 캐스팅 예정 -> 0:Player, 1:Enemy, 2:Boss
+    public string Unit_Name;            // 유닛 이름
     public int Unit_MaxHp;              // 유닛 최대 체력
     public int Unit_AtkLevel;           // 유닛 공격 레벨
     public int Unit_DefLevel;           // 유닛 방어 레벨
@@ -21,40 +20,45 @@ public class UnitData
 public class CardData
 {
     public string Card_Id;              // 카드 ID 값
-    public string Card_Name;            // 카드 이름
-    public string Card_Description;     // UI에 표시될 카드 설명
-    public string Card_BoostType;       // 코인이 앞면 판정일 때, 추가 위력 증가 조건의 ID를 저장하는 부분
-
     public int Card_Type;               // 카드의 속성 int로 받아서 enum으로 캐스팅 예정
+    public string Card_Name;            // 카드 이름
     public int Card_CostPride;          // 카드 소모값
     public int Card_BasePower;          // 카드 기본 값
     public int Card_CoinCount;          // 카드 코인 갯수
     public int Card_CoinPower;          // 코인이 앞면일때 코인 갯수 당 증가할 위력
     public int Card_AtkType;            // 카드의 공격 유형 int로 받아서 enum으로 캐스팅 예정
-
+    
+    public string Card_BoostType;       // 코인이 앞면 판정일 때, 추가 위력 증가 조건의 ID를 저장하는 부분
     public int Card_BoostValue;         // 코인이 앞면 판정일때 앞면인 코인 갯수 별로 증가될 카드 위력
     public int Card_BoostMax;           // 코인이 앞면 판정일때 증가 할수 있는 최대 위력
+    public string Card_Description;     // UI에 표시될 카드 설명
 }
 
 public class CoinData
 {
-    public string Coin_Id;
-    public string Coin_CardId;
-    public string Coin_EffectData;
-    public string Coin_Description;
-
-    public int Coin_Index;
-    public int Coin_TrggerType;
-
+    public string Coin_Id;              // 코인 Id 값
+    public string Coin_CardId;          // 코인이 속해 있는 카드 Id 값
+    public int Coin_Index;              // 코인 순서 어떤 카드의 몇번째 코인인지
+    
+    public int Coin_TriggerType;        // 코인 효과 발동 속성 값 int로 받아서 enum으로 캐스팅 예정
+                                        // 0이면 On_Use (카드 사용 시)
+                                        // 1이면 On_Hit (적중 시 - 앞/뒷면 상관없이 무조건)
+                                        // 2이면 On_Heads_Hit (앞면 적중 시)
+                                        // 3이면 On_Clash_Win (합 승리 시)
+                                    
+    public string Coin_EffectData;      // 코인 별로 판정이 True 일때 부여할 효과 Id
+    public string Coin_Description;     // 코인 별 설명
 }
 
 public class EffectData
 {
-    public string Effect_Id;
-    public string Effect_Name;
-    public string Effect_Description;
-
-    public int Effect_Type;
+    public string Effect_Id;            // 이펙트 ID 값
+    public string Effect_Name;          // 이펙트 이름
+    public int Effect_Type;             // 이펙트 타입 속성 값
+                                        // 0이면 Buff: 아군 유닛에게 이로운 효과
+                                        // 1이면 Debuff: 피격 유닛에게 해로운 효과
+                                        // 2이면 System: 해당 유닛에게 이미 부여된 효과 차감 혹은 시스템적으로 처리할 +-  수치 값.
+    public string Effect_Description;   // 이펙트 설명
 }
 
 public class CsvLoader : MonoBehaviour
@@ -68,7 +72,9 @@ public class CsvLoader : MonoBehaviour
     // 파싱된 데이터를 보관할 딕셔너리
     public Dictionary<string, UnitData> UnitDictionary = new Dictionary<string, UnitData>();
     public Dictionary<string, CardData> CardDictionary = new Dictionary<string, CardData>();
-
+    public Dictionary<string, CoinData> CoinDictionary = new Dictionary<string, CoinData>();
+    public Dictionary<string, EffectData> EffectDictionary = new Dictionary<string, EffectData>();
+    
     // 절대 경로를 저장하는 배열
     private string[] _filePath = new string[4];
 
@@ -82,6 +88,7 @@ public class CsvLoader : MonoBehaviour
         LoadUnitData();
         LoadCardData();
         LoadCoinData();
+        LoadEffectData();
     }
 
     private void SetPath()
@@ -123,7 +130,6 @@ public class CsvLoader : MonoBehaviour
 
                     try
                     {
-                        // 넘겨받은 람다식(조립 설명서)을 실행하여 데이터를 파싱
                         onParseRow(values);
                     }
                     catch (Exception ex)
@@ -143,9 +149,8 @@ public class CsvLoader : MonoBehaviour
 
     private void LoadUnitData()
     {
-        Debug.Log("<color=green>Unit_Table 로드 및 파싱 시작!</color>");
+        Debug.Log("<color=green>================ Unit_Table 파싱 시작 ================</color>");
 
-        // 공통 함수에 경로, 기대 컬럼 수(9개), 그리고 어떻게 조립할지(람다식)만 넘겨줍니다.
         LoadCsvBase(_filePath[0], 9, (values) =>
         {
             UnitData newData = new UnitData
@@ -163,41 +168,96 @@ public class CsvLoader : MonoBehaviour
             UnitDictionary.Add(newData.Unit_Id, newData);
         });
 
-        Debug.Log($"<color=cyan>Unit 데이터 파싱 완료! 총 {UnitDictionary.Count}개 등록.</color>");
+        Debug.Log($"<color=green>Unit 데이터 파싱 완료! (총 {UnitDictionary.Count}개)</color>");
+        
+        foreach (UnitData unit in UnitDictionary.Values)
+        {
+            Debug.Log($"<color=green>[Unit]</color> ID: {unit.Unit_Id} | 이름: {unit.Unit_Name} | 타입: {unit.Unit_Type} | HP: {unit.Unit_MaxHp} | 공/방: {unit.Unit_AtkLevel}/{unit.Unit_DefLevel} | 내성(관/참/타): {unit.Unit_ResistPierce:F1}/{unit.Unit_ResistSlash:F1}/{unit.Unit_ResistBlunt:F1}");
+        }
     }
 
     private void LoadCardData()
     {
-        Debug.Log("<color=green>Card_Table 로드 및 파싱 시작!</color>");
+        Debug.Log("<color=cyan>================ Card_Table 파싱 시작 ================</color>");
 
-        // 카드 테이블은 컬럼이 12개입니다.
         LoadCsvBase(_filePath[1], 12, (values) =>
         {
             CardData newData = new CardData
             {
                 Card_Id = values[0].Trim(),
-                Card_Name = values[1].Trim(),
-                Card_Description = values[2].Trim(),
-                Card_BoostType = values[3].Trim(),
-                Card_Type = int.Parse(values[4].Trim()),
-                Card_CostPride = int.Parse(values[5].Trim()),
-                Card_BasePower = int.Parse(values[6].Trim()),
-                Card_CoinCount = int.Parse(values[7].Trim()),
-                Card_CoinPower = int.Parse(values[8].Trim()),
-                Card_AtkType = int.Parse(values[9].Trim()),
-                Card_BoostValue = int.Parse(values[10].Trim()),
-                Card_BoostMax = int.Parse(values[11].Trim())
+                Card_Type = int.Parse(values[1].Trim()),
+                Card_Name = values[2].Trim(),
+                Card_CostPride = int.Parse(values[3].Trim()),
+                Card_BasePower = int.Parse(values[4].Trim()),
+                Card_CoinCount = int.Parse(values[5].Trim()),
+                Card_CoinPower = int.Parse(values[6].Trim()),
+                Card_AtkType = int.Parse(values[7].Trim()),
+                Card_BoostType = values[8].Trim(),
+                Card_BoostValue = int.Parse(values[9].Trim()),
+                Card_BoostMax = int.Parse(values[10].Trim()),
+                Card_Description = values[11].Trim()
             };
             CardDictionary.Add(newData.Card_Id, newData);
         });
 
-        Debug.Log($"<color=cyan>Card 데이터 파싱 완료! 총 {CardDictionary.Count}개 등록.</color>");
+        Debug.Log($"<color=cyan>Card 데이터 파싱 완료! (총 {CardDictionary.Count}개)</color>");
+        
+        // 파싱된 데이터 출력
+        foreach (CardData card in CardDictionary.Values)
+        {
+            Debug.Log($"<color=cyan>[Card]</color> ID: {card.Card_Id} | 이름: {card.Card_Name} | 소모: {card.Card_CostPride} | 위력: {card.Card_BasePower} | 코인수: {card.Card_CoinCount}(+{card.Card_CoinPower}) | 속성: {card.Card_AtkType} | 특수: {card.Card_BoostType}({card.Card_BoostValue}씩/최대{card.Card_BoostMax})");
+        }
     }
 
     private void LoadCoinData()
     {
-        Debug.Log("<color=gold>Coin_Table 로드 및 파싱 시작!</color>");
+        Debug.Log("<color=yellow>================ Coin_Table 파싱 시작 ================</color>");
 
-        //LoadCsvBase(_filePath[2])
+        LoadCsvBase(_filePath[2], 6, (values) =>
+        {
+            CoinData newData = new CoinData
+            {
+                Coin_Id = values[0].Trim(),
+                Coin_CardId = values[1].Trim(),
+                Coin_Index = int.Parse(values[2].Trim()),
+                Coin_TriggerType = int.Parse(values[3].Trim()),
+                Coin_EffectData = values[4].Trim(),
+                Coin_Description = values[5].Trim(),
+            };
+            CoinDictionary.Add(newData.Coin_Id, newData);
+        });
+        
+        Debug.Log($"<color=yellow>Coin 데이터 파싱 완료! (총 {CoinDictionary.Count}개)</color>");
+        
+        // 파싱된 데이터 출력
+        foreach (CoinData coin in CoinDictionary.Values)
+        {
+            Debug.Log($"<color=yellow>[Coin]</color> ID: {coin.Coin_Id} | 부모카드: {coin.Coin_CardId} | 순서: {coin.Coin_Index} | 발동조건: {coin.Coin_TriggerType} | 효과: {coin.Coin_EffectData} | 설명: {coin.Coin_Description}");
+        }
+    }
+
+    private void LoadEffectData()
+    {
+        Debug.Log("<color=magenta>================ Effect_Table 파싱 시작 ================</color>");
+
+        LoadCsvBase(_filePath[3], 4, (values) =>
+        {
+            EffectData newData = new EffectData
+            {
+                Effect_Id = values[0].Trim(),
+                Effect_Name = values[1].Trim(),
+                Effect_Type = int.Parse(values[2].Trim()),
+                Effect_Description = values[3].Trim()
+            };
+            EffectDictionary.Add(newData.Effect_Id, newData);
+        });
+
+        Debug.Log($"<color=magenta>Effect 데이터 파싱 완료! (총 {EffectDictionary.Count}개)</color>");
+        
+        // 파싱된 데이터 출력
+        foreach (EffectData effect in EffectDictionary.Values)
+        {
+            Debug.Log($"<color=magenta>[Effect]</color> ID: {effect.Effect_Id} | 이름: {effect.Effect_Name} | 타입: {effect.Effect_Type} | 설명: {effect.Effect_Description}");
+        }
     }
 }
